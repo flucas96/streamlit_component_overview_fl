@@ -34,6 +34,7 @@ six==1.17.0
 smmap==5.0.2
 st-ant-menu==0.0.17
 st-ant-tree==0.0.13
+st-mui-table==0.0.6
 st-star-rating==0.0.6
 streamlit==1.41.1
 streamlit-code-editor==0.1.22
