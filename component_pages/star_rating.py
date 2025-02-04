@@ -23,6 +23,13 @@ def app():
         <img src="https://img.shields.io/pypi/v/st-star-rating" alt="PyPI version">
         </a>
         """, unsafe_allow_html=True)
+    
+    
+    st.markdown("""
+                <a href="https://discuss.streamlit.io/t/new-component-star-ratings/36829" target="_blank">
+    <img src="https://img.shields.io/badge/Streamlit%20Forum-Discussion-red?logo=streamlit" alt="Streamlit Forum Discussion">
+    </a>
+    """, unsafe_allow_html=True)
 
     st_texte.insert_section_header("Installation & Import", icon="fa-solid fa-download")
     

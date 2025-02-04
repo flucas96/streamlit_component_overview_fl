@@ -287,6 +287,9 @@ def display_info_border_left(
     """
     html_content = f"""
     <style>
+    ul {{
+        padding-left: 20px;
+    }}
         .border-left {{
             border-left: 2px solid #000;
             padding-left: 10px;

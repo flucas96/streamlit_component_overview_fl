@@ -44,18 +44,23 @@ with st.sidebar:
             "label": "<b> Statistic Card</b>",
             "key": "5",
             "icon": "fa-solid fa-chart-bar",
+            "disabled": True,
         },
         
         {
             "label": "<b>Button Group</b>",
             "key": "6",
             "icon": "fa-solid fa-box",
+            "disabled": True,
+
         },
         
         {
             "label": "<b>Antd Menu</b>",
             "key": "7",
             "icon": "fa-solid fa-list",
+            "disabled": True,
+
             
         },
     ]
@@ -80,7 +85,7 @@ with st.sidebar:
                         multiple=False,
                        # css_styling_menu=css_styling,
                         additionalHeight=0,
-                        iconSize=20,
+                        iconSize=15,
                      #   generall_css_styling=general_style,
                         # defaultOpenKeys=expand_dashboard,
                         inlineIndent=10,
@@ -88,6 +93,29 @@ with st.sidebar:
                         defaultValue=defaultSelectedKeys[0],
     )
     
+    with st.sidebar:
+        st.divider()
+        
+        st.html(
+    """
+    
+    <div style="text-align: center;background-color:white;padding:20px;border-radius:10px;box-shadow: 0 0 10px #888;">
+        <img src="https://avatars.githubusercontent.com/u/59033065" alt="Profile Picture" style="border-radius: 50%;width:170px;">
+        <h2 style="margin: 2px;">Fabian Lucas</h2>
+        <h4 style="margin: 2px;"> Lead Data Analyst</h4> 
+        <br>
+        <p>👋 Hi, I'm Fabian Lucas. I am a passionate Streamlit developer. I hope you find my components useful.</p>
+        <p>💡 Let's connect:</p>
+        <a href="https://github.com/flucas96" target="_blank" style="text-decoration: none;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="30">
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/fabianlucas" target="_blank" style="text-decoration: none; margin-right: 10px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="30">
+        </a>
+    </div>
+    """,
+)
     
 
 func_dict = {
