@@ -61,6 +61,19 @@ with st.sidebar:
     ]
     
     
+    #look into the query params if there is anything preselected
+    defaultSelectedKeys = ["1"]
+    for key,value in st.query_params.to_dict().items():
+        if key.lower() == "preselect":
+            if value.lower() in [item["key"] for item in menu_structure]:
+                defaultSelectedKeys = [str(value.lower())] 
+                
+                st.query_params.clear()
+                break
+            
+            
+                
+    
     current_selection = st_ant_menu(
                         menu_structure,
                         key="main_menu",
@@ -71,8 +84,8 @@ with st.sidebar:
                      #   generall_css_styling=general_style,
                         # defaultOpenKeys=expand_dashboard,
                         inlineIndent=10,
-                        defaultSelectedKeys=["1"],
-                        defaultValue="1",
+                        defaultSelectedKeys=defaultSelectedKeys,
+                        defaultValue=defaultSelectedKeys[0],
     )
     
     
@@ -86,6 +99,8 @@ func_dict = {
     "6": component_pages.button_group.app,
     "7": component_pages.antd_menu.app,
 }
+
+
 
 
 func_dict[current_selection]()
