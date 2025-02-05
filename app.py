@@ -68,17 +68,18 @@ with st.sidebar:
     
     #look into the query params if there is anything preselected
     defaultSelectedKeys = ["1"]
+    defaultValue = []
     for key,value in st.query_params.to_dict().items():
         if key.lower() == "preselect":
             if value.lower() in [item["key"] for item in menu_structure]:
                 defaultSelectedKeys = [str(value.lower())] 
-                
+                defaultValue = defaultSelectedKeys[0]
+                st.session_state["main_menu"] = defaultSelectedKeys
                 st.query_params.clear()
                 break
             
             
                 
-    
     current_selection = st_ant_menu(
                         menu_structure,
                         key="main_menu",
@@ -90,9 +91,10 @@ with st.sidebar:
                         # defaultOpenKeys=expand_dashboard,
                         inlineIndent=10,
                         defaultSelectedKeys=defaultSelectedKeys,
-                        defaultValue=defaultSelectedKeys[0],
+                        defaultValue=defaultValue,
     )
     
+ 
     with st.sidebar:
         st.divider()
         
@@ -130,6 +132,7 @@ func_dict = {
 
 
 
-
-func_dict[current_selection]()
+if not current_selection: 
+    current_selection = "1"
+func_dict[str(current_selection)]()
         
