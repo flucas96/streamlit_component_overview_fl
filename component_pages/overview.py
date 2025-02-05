@@ -3,6 +3,17 @@ import streamlit as st
 import st_texte
 def app():
     
+    img_style = """
+    <style>
+    img {
+        box-shadow: 0 0 10px #888;
+        border-radius: 5px;
+    }
+    </style>
+    """
+    
+    st.html(img_style)
+    
     st_texte.generate_header_report("Welcome!")
     
     st_texte.add_custom_space(20)
