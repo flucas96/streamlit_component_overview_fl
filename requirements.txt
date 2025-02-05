@@ -6,6 +6,7 @@ certifi==2025.1.31
 charset-normalizer==3.4.1
 click==8.1.8
 colorama==0.4.6
+et_xmlfile==2.0.0
 gitdb==4.0.12
 GitPython==3.1.44
 idna==3.10
@@ -17,6 +18,7 @@ MarkupSafe==3.0.2
 mdurl==0.1.2
 narwhals==1.25.0
 numpy==2.2.2
+openpyxl==3.1.5
 packaging==24.2
 pandas==2.2.3
 pillow==11.1.0
@@ -33,7 +35,9 @@ rpds-py==0.22.3
 six==1.17.0
 smmap==5.0.2
 st-ant-menu==0.0.17
+st-ant-statistic==0.0.6
 st-ant-tree==0.0.13
+st-btn-group==0.0.11
 st-mui-table==0.0.6
 st-star-rating==0.0.6
 streamlit==1.41.1
