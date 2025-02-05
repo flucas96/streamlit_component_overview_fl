@@ -44,14 +44,14 @@ with st.sidebar:
             "label": "<b> Statistic Card</b>",
             "key": "5",
             "icon": "fa-solid fa-chart-bar",
-            "disabled": True,
+            "disabled": False,
         },
         
         {
             "label": "<b>Button Group</b>",
             "key": "6",
             "icon": "fa-solid fa-box",
-            "disabled": True,
+            "disabled": False,
 
         },
         

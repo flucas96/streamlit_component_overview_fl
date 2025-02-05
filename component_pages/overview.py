@@ -24,7 +24,7 @@ def app():
     
     st_texte.small_heading("Star Rating")
     st_texte.add_custom_space(20)
-    col_l, col_r = st.columns(2)
+    col_l, col_r = st.columns(2, vertical_alignment="center")
 
     with col_l:
         st.write("As mentioned in the introduction, this was the first component I developed, and it helped me better understand how Streamlit components work.")
@@ -42,7 +42,7 @@ def app():
     st_texte.add_custom_space(20)
     
 
-    col_l, col_r = st.columns(2)
+    col_l, col_r = st.columns(2, vertical_alignment="center")
     with col_l:
         st.write("The tree selection component is based on an Ant Design React component. I needed a way to create hierarchical selections in Streamlit because I had many options that required structure. Additionally, I wanted the ability to style the options using HTML (e.g., bold text, different colors, etc.) to enhance the user experience.")
         st.link_button("**View the component**", url="/?preselect=2", type="primary", icon=":material/park:")
@@ -54,7 +54,7 @@ def app():
     st_texte.small_heading("MUI Table")
     
     st_texte.add_custom_space(20)
-    col_l, col_r = st.columns(2)
+    col_l, col_r = st.columns(2, vertical_alignment="center")
     
     with col_l:
         st.write("I needed a way to expand table rows to display additional information. Additionally, the ability to render HTML within the table is highly useful, as it allows me to include links, images, styling, and more.")
@@ -63,4 +63,35 @@ def app():
         
     with col_r:
         st.image("./static/images/mui_table.png")
+        
+        
+    st_texte.small_heading("Statistic Card")
+    st_texte.add_custom_space(20)
+    col_l, col_r = st.columns(2, vertical_alignment="center")
+    
+    with col_l:
+        st.write("I needed a neat way to display statistics in Streamlit. Important to me was to be able to use HTML/ CSS styling to customize the look and feel of the statistic card.")
+        st.link_button("**View the component**", url="/?preselect=5", type="primary", icon=":material/view_kanban:")
+        
+    with col_r:
+        
+        st.image("./static/images/statistic_card.png")
+        
+        
+    st_texte.small_heading("Button Group")
+    st_texte.add_custom_space(20)
+    col_l, col_r = st.columns(2, vertical_alignment="center")
+    with col_l:
+        st.write("The main purpose of this component is to enable file downloads directly from Streamlit without triggering a rerun when clicking the button. Also I wanted to customize the look and feel of the buttons.")
+        st.link_button("**View the component**", url="/?preselect=6", type="primary", icon=":material/gamepad:")
+        
+        
+    with col_r:
+        st.image("./static/images/dwn_btn_1.png")
+        st.image("./static/images/dwn_btn_2.png")
+        
+        
+        
+        
+    
     
