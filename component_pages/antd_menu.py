@@ -141,7 +141,7 @@ def app():
         )
         
         st.write("**Selected Option:** ", selected_option)     
-                ''')
+                ''', wrap_lines=True)
         
     
     st_texte.insert_section_header("Advanced Usage")
@@ -172,7 +172,7 @@ def app():
                 selected_options = st_ant_menu(menu_data, key="menu3", multiple=False, generall_css_styling=general_style,
                                            defaultValue=["5"], defaultSelectedKeys=["5"])
 
-                """)
+                """, wrap_lines=True)
     col_left, col_right = st.columns(2)
     
     with col_left:
@@ -187,7 +187,7 @@ def app():
                 selected_options = st_ant_menu(menu_data, key="menu4", multiple=False, generall_css_styling=general_style,
                                            defaultOpenKeys=["7"])
 
-                """)
+                """, wrap_lines=True)
         st.write("It is possible to expand parent menus by default. The `defaultOpenKeys`parameter can be used to do this.")
 
   
