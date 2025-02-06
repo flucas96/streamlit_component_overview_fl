@@ -69,7 +69,7 @@ with st.sidebar:
     defaultValue = []
     for key,value in st.query_params.to_dict().items():
         if key.lower() == "preselect":
-            if value.lower() in [item["key"] for item in menu_structure]:
+            if value.lower() in [item["key"] for item in menu_structure if "key" in item]:
                 defaultSelectedKeys = [str(value.lower())] 
                 defaultValue = defaultSelectedKeys[0]
                 st.session_state["main_menu"] = defaultSelectedKeys
