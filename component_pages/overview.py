@@ -102,6 +102,17 @@ def app():
         st.image("./static/images/dwn_btn_2.png")
         
         
+    st_texte.small_heading("Menu Component")
+    st_texte.add_custom_space(20)
+    col_l, col_r = st.columns(2, vertical_alignment="center")
+
+    with col_l:
+        st.write("The menu component is a custom component that I created to make it easier to create complex menus in Streamlit. It offers the possibility to create nested menus, dividers, disable options, and more. Like the other components, it is also highly customizable using CSS styling or inline HTML.")
+        
+    with col_r:
+        st.image("./static/images/menu_1.png")
+        
+        
         
         
     

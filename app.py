@@ -20,33 +20,33 @@ with st.sidebar:
             "label": "<b>Overview</b>",
             "key": "1",
             "icon": "fa-solid fa-house-chimney",
-            
         },
+        {"type": "divider"},
         {
             "label": "<b>Tree Select</b>",
             "key": "2",
             "icon": "fa-solid fa-tree",
-            
         },
+
         {
             "label": "<b>Star Rating</b>",
             "key": "3",
             "icon": "fa-solid fa-star",
         },
-        
+
         {
             "label": "<b>MUI Table</b>",
             "key": "4",
             "icon": "fa-solid fa-table",
         },
-        
+
         {
             "label": "<b> Statistic Card</b>",
             "key": "5",
             "icon": "fa-solid fa-chart-bar",
             "disabled": False,
         },
-        
+
         {
             "label": "<b>Button Group</b>",
             "key": "6",
@@ -54,14 +54,12 @@ with st.sidebar:
             "disabled": False,
 
         },
-        
+
         {
-            "label": "<b>Antd Menu</b>",
+            "label": "<b>Menu Component</b>",
             "key": "7",
             "icon": "fa-solid fa-list",
-            "disabled": True,
-
-            
+            "disabled": False,
         },
     ]
     
@@ -79,7 +77,15 @@ with st.sidebar:
                 break
             
             
-                
+    general_style = """
+        .ant-menu {background-color: #f9f9f9 !important}
+        .ant-menu-item {padding-top: 25px !important; padding-bottom: 25px !important; font-size: 15px !important}
+        .ant-menu-submenu-title {padding-top: 25px !important; padding-bottom: 25px !important;}
+        .ant-menu-submenu {padding-top: 5px !important}
+        .ant-menu-submenu-title:hover {font-weight: bold !important}
+        .ant-menu-item:hover {font-weight: bold !important;}
+        """
+          
     current_selection = st_ant_menu(
                         menu_structure,
                         key="main_menu",
@@ -87,7 +93,7 @@ with st.sidebar:
                        # css_styling_menu=css_styling,
                         additionalHeight=0,
                         iconSize=15,
-                     #   generall_css_styling=general_style,
+                       generall_css_styling=general_style,
                         # defaultOpenKeys=expand_dashboard,
                         inlineIndent=10,
                         defaultSelectedKeys=defaultSelectedKeys,
@@ -100,7 +106,6 @@ with st.sidebar:
         
         st.html(
     """
-    
     <div style="text-align: center;background-color:white;padding:20px;border-radius:10px;box-shadow: 0 0 10px #888;">
         <img src="https://avatars.githubusercontent.com/u/59033065" alt="Profile Picture" style="border-radius: 50%;width:170px;box-shadow: 0 0 0 0;">
         <h2 style="margin: 2px;">Fabian Lucas</h2>
