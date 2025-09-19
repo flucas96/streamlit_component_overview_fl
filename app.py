@@ -109,7 +109,7 @@ with st.sidebar:
     <div style="text-align: center;background-color:white;padding:20px;border-radius:10px;box-shadow: 0 0 10px #888;">
         <img src="https://avatars.githubusercontent.com/u/59033065" alt="Profile Picture" style="border-radius: 50%;width:170px;box-shadow: 0 0 0 0;">
         <h2 style="margin: 2px;">Fabian Lucas</h2>
-        <h4 style="margin: 2px;"> Lead Data Analyst</h4> 
+        <h4 style="margin: 2px;">Solution Engineer</h4> 
         <br>
         <p>👋 Hi, I'm Fabian Lucas. I am a passionate Streamlit developer. I hope you find my components useful.</p>
         <p>💡 Let's connect:</p>
